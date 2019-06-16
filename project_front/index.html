@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CocktailMaker</title>
+  <meta name="description" content="on this page you can see all the cocktail, filter them, or add one.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#0053fb">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/screen.css" type="text/css">
+
+  <script src="script/app.js"></script>
+  <script defer src="script/dataHandler.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      toggleNav();
+    })
+
+    function toggleNav() {
+      let toggleTrigger = document.querySelectorAll(".js-toggle-nav");
+      for (let i = 0; i < toggleTrigger.length; i++) {
+        toggleTrigger[i].addEventListener("click", function () {
+          document.querySelector("body").classList.toggle("has-mobile-nav");
+        })
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="o-row o-row--md u-green">
+      <div class="o-container">
+        <div class="c-header">
+          <div class="c-header__logo">
+            <h1 class="c-logo">
+              Cocktails
+            </h1>
+          </div>
+          <div class="c-header__nav">
+            <nav class="c-nav">
+              <ul class="o-list c-nav__list">
+                <li class="c-nav__item"><a href="index.html" class="c-nav__link">Cocktails</a></li>
+                <li class="c-nav__item"><a href="ingredienten.html" class="c-nav__link">Ingrediënten</a></li>
+                <li class="c-nav__item c-nav-current"><a href="logboek.html" class="c-nav__link">Statistieken</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="c-header__nav__mobile">
+            <nav class="c-nav js-mobilenav">
+              <svg class="c-nav__hamburger js-toggle-nav" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                <path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </svg>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="js-data">
+    </div>
+  </div>
+  <aside class="c-mobile-nav">
+    <div class="c-mobile-nav__bg">
+      <svg class="c-nav__hamburger js-toggle-nav" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+        <path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" />
+        <path d="M0 0h24v24H0z" fill="none" />
+      </svg></div>
+    <div class="c-mobile-nav__body">
+      <div class="c-mobile-nav__header"></div>
+      <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+        <nav class="c-nav">
+          <ul class="o-list c-nav__list">
+            <li class="c-nav__item"><a href="#!" class="c-nav__link">Cocktails</a></li>
+            <li class="c-nav__item"><a href="ingredienten.html" class="c-nav__link">Ingrediënten</a></li>
+            <li class="c-nav__item"><a href="logboek.html" class="c-nav__link">Logboek</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="c-mobile-nav__nav"></div>
+    </div>
+  </aside>
+</body>
+
+</html>
